@@ -14,10 +14,10 @@ import numpy as np
 
 # Create class for storing arrays
 
-class h_ij_array_class():
-    pass
-
-def jacchia_71_tabulated_helium_vales():
+def jacchia_71_gill_tabulated_helium_values():
+    #
+    class h_ij_array_class():
+        pass
     
     # 
     h_ij_array = h_ij_array_class();
