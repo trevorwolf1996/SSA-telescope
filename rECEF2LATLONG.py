@@ -27,7 +27,7 @@ def rECEF2LATLONG(rECEF):
     #
     F = (b*rECEF[2] + (a**2.0 + b**2.0))/(a*r_delta_sat);
     P = (4.0*(E*F + 1.0))/3.0;
-    Q = 2.0*(E**2 - F**2);
+    Q = 2.0*(E**2.0 - F**2.0);
     D = P**3.0 + Q**2.0;
     if D > 0.0:
         nu = (np.sqrt(D) - Q)**(1/3) - (np.sqrt(D) + Q)**(1/3);
