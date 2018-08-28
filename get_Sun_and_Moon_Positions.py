@@ -21,7 +21,7 @@ Outputs:
     rECIF_Moon: ECIF 3x1 position vector of the Moon in mean-of-date coordinate frame
     rECIF_Sun: ECIF 3x1 position vector of the Sun in mean-of-date coordinate frame
 
-@author: Trevor Wolf 
+Copyright (c) Trevor Wolf 2018. All Rights Reserved. 
 """
 
 
