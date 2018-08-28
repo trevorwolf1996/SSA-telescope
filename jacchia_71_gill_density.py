@@ -37,11 +37,9 @@ Outputs:
     log_density: log-density of the atmosphere 
 
 
-
 Copyright (c) 2018 Trevor Wolf. All Rights Reserved.
 """
 import numpy as np
-# Comment to test project commit
 
 def jacchia_71_gill_density(RA_sat, RA_sun, Z, declination_sun, latitude_sat,\
                             jday, F_10p7_current, F_10p7_bar, K_p, c_ij_array,\
