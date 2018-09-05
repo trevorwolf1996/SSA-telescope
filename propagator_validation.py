@@ -108,6 +108,19 @@ while True:
         
     #
     count = count + 1;
+#
+# Call the spherical harmonic array file
+#
+zonal_coeff_array, sectorial_coeff_array, tesseral_coeff_array =\
+spherical_harmonic_arrays()
+#
+# Call the jacchia 71 model array files
+#
+c_ij_array = jacchia_71_gill_tabulated_SD_values()
+h_ij_array = jacchia_71_gill_tabulated_helium_values()
+#
+# 
+
         
     
     
