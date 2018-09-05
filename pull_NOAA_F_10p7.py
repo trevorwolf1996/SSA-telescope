@@ -29,32 +29,33 @@ day = 30;
 hr = 0;
 mi = 0;
 
-
-
-mon_vec = [b'Jan', b'Feb', b'Mar', b'Apr', b'May', b'Jun', b'Jul', b'Aug', \
-           b'Sep', b'Oct', b'Nov', b'Dec']
-#
-# Pull the current F_10.7 solar flux value
-#
-
-F_10p7 = [];
-mon_index = mon - 1;
-mon_string = mon_vec[int(mon_index)];
-#
-response = urllib.request.urlopen('ftp://ftp.swpc.noaa.gov/pub/weekly/27DO.txt')
-#
-for i in range(0, 38):
-    line = response.readline()
-    if i >=  11:
-        if float(line[0:4]) == yr:
-            if line[5:8] == mon_string:
-                if float(line[9:11]) == day:
-                    F_10p7 = float(line[17:19])
+def pull_NOAA_F_10p7(yr, mon, day, hr, mi):
+    
+    mon_vec = [b'Jan', b'Feb', b'Mar', b'Apr', b'May', b'Jun', b'Jul', b'Aug', \
+               b'Sep', b'Oct', b'Nov', b'Dec']
+    #
+    # Pull the current F_10.7 solar flux value
+    #
+    
+    F_10p7 = [];
+    mon_index = mon - 1;
+    mon_string = mon_vec[int(mon_index)];
+    #
+    response = urllib.request.urlopen('ftp://ftp.swpc.noaa.gov/pub/weekly/27DO.txt')
+    #
+    for i in range(0, 38):
+        line = response.readline()
+        if i >=  11:
+            if float(line[0:4]) == yr:
+                if line[5:8] == mon_string:
+                    if float(line[9:11]) == day:
+                        F_10p7 = float(line[17:19])
+                    #
                 #
-            #
-
-if not F_10p7:
-    raise ValueError('No valid F_10.7 flux value could be found')
+    
+    if not F_10p7:
+        raise ValueError('No valid F_10.7 flux value could be found');
+    
                     
 
 
