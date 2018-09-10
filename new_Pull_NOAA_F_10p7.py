@@ -233,14 +233,5 @@ F_10p7_obs_array, F_10p7_adj_future_array = pull_NOAA_F_10p7(yr, mon)
         
         
     
-    
-    
-    
-    
-    
-
-#
-# Find the historical F_10.7 values contained in the data set yyyy.vm and save 
-#
 
 
