@@ -8,10 +8,6 @@ with respect to the sectorial and and tesseral axes. The accelerations are
 computed in the body fixed ITRF coordinate frame. This will be transformed 
 into either a MOD or TOD coordinate frame for integrating. 
 
-
-OUTSTANDING QUESTION: Does this function account for the point mass contribution
-of Earth's gravitational attraction? 
-
 Copyright (c) 2018 Trevor Wolf. All rights reserved. 
 
 Inputs: 
@@ -24,6 +20,11 @@ Inputs:
     
     tesseral_coeff_array: numpy array containt the terms that describe the mass 
     distrition of the Earth for a teseral pattern 
+
+Outputs:
+        
+    accel_spherical_harmonic_ITRF: Accelation caused be the spherical harmonic 
+    Earth gravitational model in the ITRF reference frame 
 """
 
 

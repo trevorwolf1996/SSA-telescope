@@ -10,11 +10,11 @@ Copyright (c) Trevor Wolf 2018. All Rights Reserved
 import numpy as np
 from spherical_harmonic_arrays import spherical_harmonic_arrays
 from spherical_harmonic_acceleration import spherical_harmonic_acceleration
-from rECIF2RADEC import rECIF2RADEC
-from rECEF2LATLONG import rECEF2LATLONG
+from rECIF2RADEC import rECIF2RADEC ## Check these to make sure in Geocentric -- or is it Geodetic that I need?
+from rECEF2LATLONG import rECEF2LATLONG ## Check these to make sure in Geocentric
 from jday import jday
-#from pull_NOAA_K_p import pull_NOAA_K_p ##NEEDS WORK
-#from pull_NOAA_F_10p7 import pull_NOAA_F_10p7 ##NEEDS WORK
+from pull_NOAA_K_p import pull_NOAA_K_p
+from new_Pull_NOAA_F_10p7 import pull_NOAA_F_10p7 
 from third_body_accelerations import third_body_accelerations
 #from get_Sun_and_Moon_Positions import get_Sun_and_Moon_Positions ##NEEDS WORK
 from solar_radiation_pressure import solar_radiation_pressure
@@ -119,7 +119,13 @@ spherical_harmonic_arrays()
 c_ij_array = jacchia_71_gill_tabulated_SD_values()
 h_ij_array = jacchia_71_gill_tabulated_helium_values()
 #
+# Import the F_10.7 and K_p values from NOAA
+#
+F_10p7_obs_array, F_10p7_adj_future_array = pull_NOAA_F_10p7(2018, 9)
+K_p_array = pull_NOAA_K_p(2018, 9)
+#
 # 
+
 
         
     
